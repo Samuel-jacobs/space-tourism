@@ -252,6 +252,9 @@ button {
 	.sub-title {
 		font-size: 18px;
 	}
+	.numbered-title {
+		font-size: 19px;
+	}
 /* ----------------- */
 /* Home  */
 /* ----------------- */
@@ -348,10 +351,17 @@ button {
 		padding-bottom: 50px;
 		text-align: center;
 	}
+	#main-page .fs-sm {
+		font-size: 19px;
+	}
 	.destination-image img {
 		height: 170px;
 		width: 170px;
 		margin-inline: auto;
+	}
+
+	.fs-xl {
+		font-size: 64px;
 	}
 	#main-page article {
 		padding: 20px;
