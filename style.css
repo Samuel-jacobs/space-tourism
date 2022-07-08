@@ -306,10 +306,17 @@ button {
 		display: block;
 	}
 
+
+	.fs-xxl {
+		font-size: 100px;
+	}
 	.home-wrapper {
 		text-align: center;
 		padding-inline: 20px;
 		padding-bottom: 50px;
+	}
+	.home-wrapper .fs-sm {
+		font-size: 19px;
 	}
 
 	.explore {
