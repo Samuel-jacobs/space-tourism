@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair');
+
+:root {
+	--lightGrey: #D0D6F9;
+	--darkGrey: #616476;
+	--black: #0B0D17;
+	--glass: rgb(150, 150, 150);
+	--fs-xxl: 150px;
+	--fs-xl: 100px;
+	--fs-lg: 56px;
+	--fs-md: 36px;
+	--fs-sm: 28px;
+	--fs-default: 16px;
+	--fs-xs: 14px;
+	--ff-barlow: 'Barlow Condensed', sans-serif;
+	--ff-bellefair: 'Bellefair', serif;
+}
+
+/* -------------------- */
+/* Reset */
+/* -------------------- */
+
+/* Box sizing */
+*, 
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, p, figure, picture {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	min-height: 100vh;	
+}
+
+img, picture {
+	max-width: 100%;
+	display: block;
+}
+
+button {
+	font: inherit;
+}
+
+
+/* -------------------- */
+/* utility classes */
+/* -------------------- */
+
+
+
+.flex {
+	display: flex;
+}
+.grid {
+	display: grid;
+}
+.space-btwn {
+	justify-content: space-between;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.ff-bellefair {
+	font-family: 'Bellefair', serif;
+}
+.ff-barlow {
+	font-family: 'Barlow Condensed', sans-serif;
+}
+.fs-xxl {
+	font-size: 150px;
+}
+.fs-xl {
+	font-size: 100px
+}
+.fs-lg {
+	font-size: 56px;
+}
+.fs-md {
+	font-size: 32px;
+}
+.fs-sm {
+	font-size: 28px;
+}
+.fs-xs {
+	font-size: 14px;
+}
+.fs-default {
+	font-size: 16px;
+}
+.fw-bold {
+	font-weight: bolder;
+}
+.fw-light {
+	font-weight: light;
+}
+.grey {
+	color: var(--darkGrey);
+}
+.lightgrey {
+	color: var(--lightGrey);
+}
+.white {
+	color: white
+}
+.l-space-lg {
+	letter-spacing: 4.75px;
+}
+.l-space-md {
+	letter-spacing: 2.7px;
+}
+.l-space-sm {
+	letter-spacing: 2.35px;
+}
+.center {
+	margin-inline: auto;
+}
+
+.nav-links a {
+	text-decoration: none;
+}
+.underline-indicator button {
+	border: none;
+	background-color: transparent;
+	color: var(--lightGrey);
+	text-transform: uppercase;
+	position: relative;
+	padding-bottom: 10px;
+	padding-inline: 0;
+	margin-inline: 10px;
+	font-weight: lighter;
+}
+.underline-indicator button.active {
+	color: white;
+}
+.underline-indicator button.active::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	background-color: white;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	font-weight: 800;
+}
+.underline-indicator button:hover::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	background-color: var(--lightGrey);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+}
+
+.dot-indicator button {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--darkGrey);
+	margin-inline: 10px;
+}
+.dot-indicator button.active {
+	background-color: white;
+}
+.dot-indicator button:hover {
+	background-color: var(--glass);
+}
+.circle-indicators button {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px solid var(--darkGrey);
+	color: white;
+	margin-inline: 10px;
+}
+.circle-indicators button:hover {
+	border: 1px solid white;
+}
+.circle-indicators button.active {
+	background-color: white;
+	color: black;
+	border: none;
+}
+
+.tab-navigation {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.tabContent {
+	display: none;
+}
+.tabContent.active {
+	display: block;
+}
+.tab-image {
+	display: none;
+}
+.tab-image.active {
+	display: block;
+}
+
+
+
+/* -------------- */
+/* home */
+/* -------------- */
+#main {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.explore {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin-inline: auto;
+}
+.explore span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border-radius: 50%;
+	color: var(--black);
+}
+.explore:hover {
+	background-color: rgb(11, 13, 23, 0.9);
+	transition: all 0.5s ease-in-out;
+}
+
+/* ----------------- */
+/* Destination */
+/* ----------------- */
+
+
+/* ----------------- */
+/* media queries */
+/* ----------------- */
+
+/* mobile */
+@media screen and (max-width: 600px) {
+	.title {
+		font-size: 28px;
+	}
+	.sub-title {
+		font-size: 18px;
+	}
+/* ----------------- */
+/* Home  */
+/* ----------------- */
+	#home {
+		background-image: url('assets/home/background-home-mobile.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+	}
+	.topnav a{
+		display: none;
+	}
+	
+  .topnav a.icon { 
+    display: block;
+  }
+	.topnav {
+		padding: 20px;
+	}
+	
+	.overlay {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		background-color: rgb(150, 150, 150, 0.2);
+		backdrop-filter: blur(15px);
+		-webkit-backdrop-filter: blur(15px);
+
+	}
+	.overlay-top {
+		justify-content: right;
+		padding: 20px;
+	}
+	
+	.nav-links {
+		position: relative;
+		padding-top: 50px;
+		padding-left: 20px;
+	}
+	.nav-links a {
+		padding-bottom: 20px;
+
+	}
+	.nav-links a:hover {
+		color: white;
+	}
+	.overlay  a{
+		display: block;
+	}
+
+	.home-wrapper {
+		text-align: center;
+		padding-inline: 20px;
+		padding-bottom: 50px;
+	}
+
+	.explore {
+		height: 250px;
+	}
+	.explore span {
+		height: 150px;
+		width: 150px;
+	}
+
+	.explore:hover {
+		height: 250px;
+		width: 250px;
+	}
+
+/* ----------------- */
+/* Destination */
+/* ----------------- */
+
+	#destination {
+		background-image: url('assets/destination/background-destination-mobile.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	#main-page {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		text-align: center;
+	}
+	.destination-image img {
+		height: 170px;
+		width: 170px;
+		margin-inline: auto;
+	}
+	#main-page article {
+		padding: 20px;
+	}
+	#main-page article p.destination-p {
+		padding-bottom: 20px;
+		border-bottom: 1px solid var(--darkGrey);
+	}
+	
+	.destination-details {
+		padding: 20px 0;
+	}
+	.destination-details div {
+		padding-bottom: 20px;
+	}
+
+/* ----------------- */
+/* Crew */
+/* ----------------- */
+
+	#crew {
+		background-image: url('assets/crew/background-crew-mobile.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+	}
+	#crew-page {
+		text-align: center;
+	}
+	.crew-image {
+		padding-top: 30px;
+		margin-inline: 20px;
+		border-bottom: 1px solid var(--darkGrey);
+	}
+	.crew-image img {
+		height: 223px;
+		margin-inline: auto;
+		
+	}
+	#crew-page article {
+		padding-inline: 20px;
+	}
+
+/* ----------------- */
+/* technology */
+/* ----------------- */
+	#technology {
+		background-image: url('assets/technology/background-technology-mobile.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;	
+	}
+	#main h1 {
+		text-align: center;
+	}
+	.technology-wrapper {
+		text-align: center;
+	}
+	.technology-main article {
+		padding-inline: 20px;
+	}
+
+}
+
+@media screen and (min-width: 601px) {
+
+/* ----------------- */
+/* Home */
+/* ----------------- */
+	.topnav hr {
+		border-bottom: 1px solid var(--darkGrey);
+	}
+	.openBtn {
+		display: none;
+	}
+	.closeBtn {
+		display: none;
+	}
+	.overlay .nav-logo {
+		display: none;
+	}
+	.overlay {
+		background-color: rgb(150, 150, 150, 0.1);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		overflow-x: hidden;
+		transition: 0.5s;
+		height: 96px;
+		display: flex;
+		justify-content: right;
+		
+	}
+	.nav-links {
+		padding-inline: 20px;
+		align-self: center;
+		height: 100%;
+		padding-top: 38px;
+	}
+	
+	.navLink {
+		display: inline-block;
+		margin-right: 20px;
+		position: relative;
+	  height: 100%;
+		text-decoration: none;
+	}
+	.navLink:hover {
+		color: white;		
+	}
+	
+	.navLink.active::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 3px;
+		background-color: white;
+		bottom: 0;
+		left: 0;
+	}
+	.navLink:hover::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 2px;
+		background-color: white;
+		bottom: 0;
+		left: 0;
+	}
+	.nav-logo {
+		align-self: center;
+	}
+
+/* ----------------- */
+/* Destination */
+/* ----------------- */
+
+	
+}
+/* tablet */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+	.title {
+		font-size: 46px;
+	}
+	.sub-title {
+		font-size: 28px;
+	}
+/* ----------------- */
+/* Home */
+/* ----------------- */
+	#home {
+		background-image: url('assets/home/background-home-tablet.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+	}
+
+	.topnav {
+		padding-top: 30px;
+		padding-left: 30px;
+	}
+	.overlay {
+		width: 450px;
+	}
+	
+	.navLink span {
+		display: none;
+	}
+
+
+	.home-wrapper {
+		width: 450px;
+		margin-inline: auto;
+		text-align: center;
+		padding: 50px 0;
+	}
+
+	.explore {
+		height: 342px;
+	}
+	.explore span{
+		height: 242px;
+		width: 242px;
+		background-color: white;
+	}
+	.explore:hover {
+		height: 342px;
+		width: 342px;
+	}
+	.explore p {
+		font-size: var(--fs-sm);
+	}
+
+/* ----------------- */
+/* Destination */
+/* ----------------- */
+	#destination {
+		background-image: url('assets/destination/background-destination-tablet.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	#main-page {
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+	}
+	
+	.destination-image {
+		padding-top: 30px;
+	}
+	.destination-image img {
+		height: 300px;
+		width: 300px;
+		margin-inline: auto;
+	}
+	.tab-navigation {
+		margin-inline: auto;
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	#main-page article {
+		padding-inline: 100px;
+		text-align: center;
+		padding-bottom: 50px;
+	}
+	.destination-p {
+		border-bottom: 1px solid var(--darkGrey);
+		padding-bottom: 20px;
+	}
+	.destination-details {
+		padding-top: 20px;
+		display: flex;
+		justify-content: space-around;
+	}
+
+
+/* ----------------- */
+/* Crew */
+/* ----------------- */
+	#crew {
+		background-image: url('assets/crew/background-crew-tablet.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;	
+	}
+	#crew-page {
+		padding-top: 50px;
+	}
+	.crew-wrapper {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.crew-image img {
+		height: 570px;
+		width: 450px;
+		margin: 0 auto;
+	}
+	#crew-page article {
+		padding-inline: 100px;
+		text-align: center;
+		padding-bottom: 30px;
+	}
+	.crew-main {
+		display: flex;
+		flex-direction: column-reverse;
+		padding-top: 50px;
+	}
+	.dot-indicator {
+		padding-top: 0;
+	}
+
+/* ----------------- */
+/* technology */
+/* ----------------- */
+	#technology {
+		background-image: url('assets/technology/background-technology-tablet.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;	
+	}
+
+	#main article {
+		padding-inline: 100px;
+		text-align: center;
+		padding-bottom: 30px;
+	}
+	.technology-image img {
+		width: 100vw;
+		
+	}
+
+}
+
+/* desktop */
+@media screen and (min-width: 1025px) {
+
+	.title {
+		font-size: 64px;
+	}
+	.numbered-title {
+		padding-left: 100px;
+	}
+	.sub-title {
+		font-size: 36px;
+	}
+/* ----------------- */
+/* Home */
+/* ----------------- */
+
+	#home {
+		background-image: url('assets/home/background-home-desktop.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+	}
+
+	.topnav {
+		padding: 30px 0 30px 30px;
+	}
+	.overlay {
+		width: 830px;
+		justify-content: center;
+	}
+	.overlay-width {
+		width: 830px;
+	}
+	.navLink {
+		margin-right: 40px;
+	}
+
+	#space {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 100px;
+		padding-inline: 100px;
+	}
+	.home-wrapper {
+		width: 450px;
+		align-self: center;
+	}
+	.explore {
+		max-width: 100%;
+		height: 450px;
+		width: 450px; 
+		margin-right: 0;
+	}
+	.explore span {
+		height: 274px;
+		width: 274px;
+		align-self: center;
+	}
+	.explore:hover {
+		height: 450px;
+		width: 450px;
+	}
+	.explore p {
+		font-size: var(--fs-md);
+	}
+
+/* ----------------- */
+/* Destination */
+/* ----------------- */
+	#destination {
+		background-image: url('assets/destination/background-destination-desktop.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	#main-page {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.destination-image {
+		max-width: 445px;
+		width: 100%;
+	}
+	.destination-image img {
+		height: 445px;
+		width: 445px;
+		object-fit: contain;
+	}
+	.destination-wrapper {
+		display: flex;
+		padding-inline: 100px;
+		justify-content: space-between;
+	}
+	.destination-main {
+		
+		max-width: 445px;
+		width: 100%;
+		margin-right: 0;
+	}
+	.destination-p {
+		border-bottom: 1px solid var(--darkGrey);
+		padding-bottom: 20px;
+	}
+	.destination-details {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 20px;
+		width: 80%;
+	}
+
+/* ----------------- */
+/* Crew */
+/* ----------------- */
+
+	#crew {
+		background-image: url('assets/crew/background-crew-desktop.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;	
+	}
+	.crew-page {
+		padding-top: 50px;
+	}
+	
+	.crew-wrapper {
+		display: flex;
+		flex-direction: row-reverse;
+		padding-inline: 100px;
+	}
+	.crew-main {
+		align-self: center;
+		display: flex;
+		flex-direction: column-reverse;
+		align-content: space-between;
+		width: 60%;
+	}
+	.crew-main article {
+		padding-bottom: 100px;
+	}
+	
+	.crew-main article p {
+		width: 55%;
+	}
+	.crew-image {
+		width: 40%;
+	}
+	.crew-image img {
+		width: 100%;
+	}
+	
+
+/* ----------------- */
+/* technology */
+/* ----------------- */
+	#technology {
+		background-image: url('assets/technology/background-technology-desktop.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;	
+	}
+
+	.technology-wrapper {
+		display: flex;
+		flex-direction: row-reverse;
+		padding-left: 100px;
+	}
+	.technology-main {
+		width: 60%;
+		display: flex;
+		align-self: center;
+	}
+	.technology-main article {
+		align-self: center;
+		padding-left: 30px;
+	}
+	.technology-main article p {
+		width: 70%;
+	}
+	.circle-indicators {
+		display: flex;
+		flex-direction: column;
+		padding-right: 30px;
+	}
+	.circle-indicators button {
+		margin-bottom: 20px;
+	}
+
+	.technology-image {
+		width: 40%;
+		margin-right: 0;
+	}
+	.technology-image img {
+		width: 515px;
+	}
+}

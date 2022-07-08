@@ -11,10 +11,49 @@
   <!--Bootstrap css-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-</head>
-<body> 
 
-  00 Home
+  <!-- main css-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="home"> 
+  <header>
+    <div class="topnav flex space-btwn" id="myTopnav">
+      <div class="nav-logo">
+        <img src="assets/shared/logo.svg" alt="logo image">
+      </div> 
+      <hr class="my-4">
+      <div class="overlay" id="myNav">
+        <div class="overlay-top flex">
+          <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"> <img src="assets/shared/icon-close.svg" alt=""></a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="navLink uppercase white ff-barlow l-space-md active"><span class="fw-bold">00</span> Home</a>
+          <a href="destination.html" class="navLink uppercase white ff-barlow l-space-md"><span class="fw-bold">01</span> Destination</a>
+          <a href="crew.html" class="navLink uppercase white ff-barlow l-space-md"><span class="fw-bold">02</span> Crew</a>
+          <a href="technology.html" class="navLink uppercase white ff-barlow l-space-md"><span class="fw-bold">03</span> Technology</a>
+        </div>
+      </div>
+      <span onclick="openNav()" class="openBtn"><img src="assets/shared/icon-hamburger.svg" alt=""></span>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="space">
+      <div class="home-wrapper">
+        <p class="ff-barlow lightgrey uppercase l-space-lg fs-sm">So, you want to travel to</p>
+        <h1 class="ff-bellefair uppercase white fs-xxl">Space</h1>
+        <p class="ff-barlow lightgrey">Let’s face it; if you want to go to space, you might as well genuinely go to 
+        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+        because we’ll give you a truly out of this world experience!
+        </p>
+      </div>
+
+      <div class="explore">
+        <span class="explore-hover"><p class="uppercase ff-bellefair ">Explore</p></span>
+      </div>
+    </section>
+  </main>
+  <!--00 Home
   01 Destination
   02 Crew
   03 Technology
@@ -25,10 +64,11 @@
   outer space and not hover kind of on the edge of it. Well sit back, and relax 
   because we’ll give you a truly out of this world experience!
 
-  Explore
-
+  Explore-->  
+  <script src="nav.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </body>
 </html>

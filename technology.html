@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="technology">
+  <header>
+    <div class="topnav flex space-btwn" id="myTopnav">
+      <div class="nav-logo">
+        <img src="assets/shared/logo.svg" alt="logo image">
+      </div> 
+      <div class="overlay" id="myNav">
+        <div class="overlay-top flex">
+          <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"> <img src="assets/shared/icon-close.svg" alt=""></a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="navLink uppercase white ff-barlow l-space-md"><span class="fw-bold">00</span> Home</a>
+          <a href="destination.html" class="navLink uppercase white ff-barlow l-space-md"><span class="fw-bold">01</span> Destination</a>
+          <a href="crew.html" class="navLink uppercase white ff-barlow l-space-md"><span class="fw-bold">02</span> Crew</a>
+          <a href="technology.html" class="navLink uppercase white ff-barlow l-space-md active"><span class="fw-bold">03</span> Technology</a>
+        </div>
+      </div>
+      <span onclick="openNav()" class="openBtn"><img src="assets/shared/icon-hamburger.svg" alt=""></span>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1 class="ff-barlow l-space-lg white uppercase fs-sm fw-light numbered-title"> <span class="grey"> 01 </span> Pick your destination</h1>
+
+    <div class="technology-wrapper">
+      <div class="technology-image pt-5">
+        <picture class="active tab-image" id="tab-image1">
+          <source media="(max-width: 1024px)" srcset="assets/technology/image-launch-vehicle-landscape.jpg">
+          <source media="(min-width: 1025px)" srcset="assets/technology/image-launch-vehicle-portrait.jpg">
+          <img src="assets/technology/image-launch-vehicle-landscape.jpg"  alt="">
+        </picture>
+  
+        <picture class="tab-image" id="tab-image2">
+          <source media="(max-width: 1024px)" srcset="assets/technology/image-spaceport-landscape.jpg">
+          <source media="(min-width: 1025px)" srcset="assets/technology/image-spaceport-portrait.jpg">
+          <img src="assets/technology/image-spaceport-landscape.jpg"  alt="">
+        </picture>
+        
+        <picture class="tab-image" id="tab-image3">
+          <source media="(max-width: 1024px)" srcset="assets/technology/image-space-capsule-landscape.jpg">
+          <source media="(min-width: 1025px)" srcset="assets/technology/image-space-capsule-portrait.jpg">
+          <img src="assets/technology/image-space-capsule-landscape.jpg"  alt="">
+        </picture> 
+      </div>
+    
+      <div class="technology-main">
+        <div class="tab-navigation circle-indicators">
+          <button class="ff-barlow l-space-sm tablink active" onclick="openTab(event, 'tab1')" id="tablink1">1</button>
+          <button class="ff-barlow l-space-sm tablink" onclick="openTab(event, 'tab2')" id="tablink2">2</button>
+          <button class="ff-barlow l-space-sm tablink" onclick="openTab(event, 'tab3')" id="tablink3">3</button>
+        </div>
+        
+        <article id="tab1" class="white tabContent active">
+          <p class="ff-barlow uppercase lightgrey l-space-sm">The terminology...</p>
+          <h2 class="ff-bellefair uppercase pt-1 title">Launch vehicle</h2>
+    
+          <p class="ff-barlow lightgrey pt-2">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+        </article>
+
+        <article id="tab2" class="white tabContent">
+          <p class="ff-barlow uppercase lightgrey l-space-sm">The terminology...</p>
+    
+          <h2 class="ff-bellefair uppercase pt-1 title">Spaceport </h2>
+    
+          <p class="ff-barlow lightgrey pt-2">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch. </p>
+        </article>
+
+        <article id="tab3" class="white tabContent">
+          <p class="ff-barlow uppercase lightgrey l-space-sm">The terminology...</p>
+          <h2 class="ff-bellefair uppercase pt-1 title"> capsule </h2>
+    
+          <p class="ff-barlow lightgrey pt-2">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained. </p>
+        </article>
+      </div>
+    </div>
+
+  </main>
+
+  <!--00 Home
+  01 Destination
+  02 Crew
+  03 Technology
+
+  03 Space launch 101
+
+  1
+  2
+  3
+
+  The terminology...
+  Launch vehicle
+
+  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+  it's quite an awe-inspiring sight on the launch pad!-->
+
+  <script src="nav.js"></script>
+  <script src="tabs.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+  <!--bootstrap css-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <!--main css-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="destination">
+  <header>
+    <div class="topnav flex space-btwn" id="myTopnav">
+      <div class="nav-logo">
+        <img src="assets/shared/logo.svg" alt="logo image">
+      </div> 
+      <div class="overlay" id="myNav">
+        <div class="overlay-top flex">
+          <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"> <img src="assets/shared/icon-close.svg" alt=""></a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="navLink uppercase white ff-barlow l-space-md"><span class="fw-bold">00</span> Home</a>
+          <a href="destination.html" class="navLink uppercase white ff-barlow l-space-md active"><span class="fw-bold">01</span> Destination</a>
+          <a href="crew.html" class="navLink uppercase white ff-barlow l-space-md"><span class="fw-bold">02</span> Crew</a>
+          <a href="technology.html" class="navLink uppercase white ff-barlow l-space-md"><span class="fw-bold">03</span> Technology</a>
+        </div>
+      </div>
+      <span onclick="openNav()" class="openBtn"><img src="assets/shared/icon-hamburger.svg" alt=""></span>
+    </div>
+  </header>
+  <main id="main-page">
+    
+    <h1 class="ff-barlow l-space-lg white uppercase fw-light fs-sm numbered-title"> <span class="grey"> 01 </span> Pick your destination</h1>
+
+    <div class="destination-wrapper pt-5">
+      <div class="destination-image">
+        <img src="assets/destination/image-moon.png" class="active tab-image" id="tab-image1" 
+        alt="the moon">
+        <img src="assets/destination/image-mars.png" class="tab-image" id="tab-image2" alt="mars">
+        <img src="assets/destination/image-europa.png" class="tab-image" id="tab-image3" alt="europa">
+        <img src="assets/destination/image-titan.png" class="tab-image" id="tab-image4" alt="titan">
+      </div>
+
+      <div class="destination-main">
+        <div class="tab-navigation underline-indicator pt-5">
+          <button class="ff-barlow l-space-sm tablink active" onclick="openTab(event, 'tab1')" id="tablink1">Moon</button>
+          <button class="ff-barlow l-space-sm tablink" onclick="openTab(event, 'tab2')" id="tablink2">Mars</button>
+          <button class="ff-barlow l-space-sm tablink" onclick="openTab(event, 'tab3')" id="tablink3">Europa</button>
+          <button class="ff-barlow l-space-sm tablink" onclick="openTab(event, 'tab4')" id="tablink4">Titan</button>
+        </div>
+    
+        <article id="tab1" class="white tabContent active">
+          <h2 class="uppercase ff-bellefair fs-xl"> Moon</h2>
+          <p class="ff-barlow destination-p lightgrey">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+         
+          <div class="destination-details">
+            <div>
+              <h3 class="ff-barlow fs-xs l-space-sm lightgrey  uppercase">Avg. distance</h3>
+              <p class="ff-bellefair fs-sm uppercase">384,400 km</p>
+            </div>
+            <div>
+              <h3 class="ff-barlow fs-xs l-space-sm lightgrey uppercase">Est. travel time</h3>
+              <p class="ff-bellefair fs-sm uppercase">3 days</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="tab2" class="white tabContent">
+          <h2 class="uppercase ff-bellefair fs-xl">Mars</h2>
+          <p class="ff-barlow destination-p lightgrey">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+    
+          <div class="destination-details">
+            <div>
+              <h3 class="ff-barlow fs-xs l-space-sm lightgrey uppercase">Avg. distance</h3>
+              <p class="ff-bellefair fs-sm uppercase">225 mil. km</p>
+            </div>
+            <div>
+              <h3 class="ff-barlow fs-xs l-space-sm lightgrey uppercase">Est. travel time</h3>
+              <p class="ff-bellefair fs-sm uppercase">9 months</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="tab3" class="white tabContent">
+          <h2 class="uppercase ff-bellefair fs-xl">Europa</h2>
+          <p class="ff-barlow destination-p lightgrey">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
+          </p>
+          <div class="destination-details">
+            <div>
+              <h3 class="ff-barlow fs-xs l-space-sm lightgrey uppercase">Avg. distance</h3>
+              <p class="ff-bellefair fs-sm uppercase">628 mil. km</p>
+            </div>
+            <div>
+              <h3 class="ff-barlow fs-xs l-space-sm lightgrey uppercase">Est. travel time</h3>
+              <p class="ff-bellefair fs-sm uppercase">3 years</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="tab4" class="white tabContent">
+          <h2 class="uppercase ff-bellefair fs-xl">Titan</h2>
+          <p class="ff-barlow destination-p lightgrey">The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+          <div class="destination-details">
+            <div>
+              <h3 class="ff-barlow fs-xs l-space-sm lightgrey uppercase">Avg. distance</h3>
+              <p class="ff-bellefair fs-sm uppercase">1.6 bil. km</p>
+            </div>
+            <div>
+              <h3 class="ff-barlow fs-xs l-space-sm lightgrey uppercase">Est. travel time</h3>
+              <p class="ff-bellefair fs-sm uppercase">7 years</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    
+    
+
+    
+  </main>
+  <!-- 00 Home
+  01 Destination
+  02 Crew
+  03 Technology
+
+  01 Pick your destination
+
+  Moon
+  Mars
+  Europa
+  Titan
+
+  Moon
+
+  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+  regain perspective and come back refreshed. While you’re there, take in some history 
+  by visiting the Luna 2 and Apollo 11 landing sites.
+
+  Avg. distance
+  384,400 km
+
+  Est. travel time
+  3 days -->
+
+  <script src="nav.js"></script>
+  <script src="tabs.js"></script>
+</body>
+</html>
